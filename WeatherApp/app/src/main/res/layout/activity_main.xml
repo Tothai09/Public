@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/img_5">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100">
+        <EditText
+            android:id="@+id/edtCity"
+            android:layout_marginRight="20dp"
+            android:layout_weight="70"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+        </EditText>
+        <Button
+            android:id="@+id/btnOK"
+            android:text="OK"
+            android:layout_weight="30"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttom_style"></Button>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txtNameTP"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="Tên thành phố"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+
+    <TextView
+        android:id="@+id/txtNameQG"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:text="Tên quốc gia"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+
+    <ImageView
+        android:id="@+id/imgTT"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_width="100dp"
+        android:layout_height="100dp"></ImageView>
+
+    <TextView
+        android:id="@+id/txtNhietdo"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:textColor="#FF0000"
+        android:layout_gravity="center"
+        android:textSize="30sp"
+        android:text="Nhiệt độ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+
+    <TextView
+        android:id="@+id/txtTT"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:textColor="#2C9C91"
+        android:layout_gravity="center"
+        android:textSize="30sp"
+        android:text="Trạng thái"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+
+    <LinearLayout
+        android:weightSum="100"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="33"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageView
+                android:src="@drawable/cloud"
+                android:layout_width="40dp"
+                android:layout_height="40dp"></ImageView>
+            <TextView
+                android:id="@+id/txtCloud"
+                android:textSize="20sp"
+                android:text="Mây"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="33"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageView
+                android:src="@drawable/steam"
+                android:layout_width="40dp"
+                android:layout_height="40dp"></ImageView>
+            <TextView
+                android:id="@+id/txtSteam"
+                android:textSize="20sp"
+                android:text="Độ ẩm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="33"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageView
+                android:src="@drawable/wind"
+                android:layout_width="40dp"
+                android:layout_height="40dp"></ImageView>
+            <TextView
+                android:id="@+id/txtWind"
+                android:textSize="20sp"
+                android:text="Gió"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/txtDate"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="Ngày nhiệt độ hiện tại"
+        android:layout_width="match_parent"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"></TextView>
+
+    <Button
+        android:id="@+id/btnStep"
+        android:layout_marginTop="20dp"
+        android:text="Các ngày tiếp theo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttom_style"></Button>
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bo_recycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:text="5 Ngày / 3 giờ"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="15dp"
+            android:id="@+id/lvWeather5days"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+</LinearLayout>
+</androidx.core.widget.NestedScrollView>
